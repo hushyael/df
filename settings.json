@@ -1,35 +1,36 @@
 {
+  "breadcrumbs.enabled": true,
   "editor.fontFamily": "MonoLisa",
+  "editor.minimap.enabled": false,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.fontSize": 14,
+  "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.smoothScrolling": true,
+  "editor.accessibilitySupport": "off",
   "editor.scrollBeyondLastLine": true,
-  "editor.minimap.enabled": false,
-  "editor.wordWrap": "on",
-  "editor.tabSize": 2,
-  "editor.unicodeHighlight.ambiguousCharacters": false,
-  "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.fontLigatures": true,
-  "editor.cursorSmoothCaretAnimation": true,
-  "explorer.compactFolders": false,
+  "editor.wordWrap": "on",
+  "editor.unicodeHighlight.invisibleCharacters": false,
   "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
-  "workbench.activityBar.visible": false,
-  "workbench.preferredDarkColorTheme": "mlia dark",
-  "workbench.preferredLightColorTheme": "mlia light",
-  "workbench.colorTheme": "mlia light",
-  "workbench.fontAliasing": "antialiased",
   "workbench.startupEditor": "none",
-  "window.autoDetectColorScheme": true,
-  "breadcrumbs.enabled": true,
-  "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
-  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-  "vscode-neovim.useCtrlKeysForInsertMode": true,
+  "workbench.preferredLightColorTheme": "mlia light",
+  "workbench.preferredDarkColorTheme": "mlia dark",
+  "workbench.colorTheme": "mlia dark",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.activityBar.visible": false,
   "vscode-neovim.useCtrlKeysForNormalMode": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "window.autoDetectColorScheme": true,
+  "vscode-neovim.neovimInitVimPaths.darwin": "~\/.config\/nvim\/init.vim",
+  "vscode-neovim.useCtrlKeysForInsertMode": true,
+  "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
+  "[go]": {
+    "editor.tabSize": 4
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
   }
 }

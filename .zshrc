@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(git)
@@ -21,3 +23,6 @@ alias zshconfig="sudo vim ~/.zshrc"
 alias ohmyzsh="sudo vim ~/.oh-my-zsh"
 alias hosts="sudo vim /etc/hosts"
 alias nvimconfig="sudo vim ~/.config/nvim/init.vim"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
