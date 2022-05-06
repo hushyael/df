@@ -16,21 +16,22 @@
   "explorer.confirmDelete": false,
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
+  "workbench.activityBar.visible": false,
   "workbench.startupEditor": "none",
+  "workbench.fontAliasing": "antialiased",
   "workbench.preferredLightColorTheme": "mlia light",
   "workbench.preferredDarkColorTheme": "mlia dark",
-  "workbench.colorTheme": "mlia dark",
-  "workbench.fontAliasing": "antialiased",
-  "workbench.activityBar.visible": false,
-  "vscode-neovim.useCtrlKeysForNormalMode": true,
+  "workbench.colorTheme": "mlia light",
   "window.autoDetectColorScheme": true,
-  "vscode-neovim.neovimInitVimPaths.darwin": "~\/.config\/nvim\/init.vim",
+  "vscode-neovim.useCtrlKeysForNormalMode": true,
   "vscode-neovim.useCtrlKeysForInsertMode": true,
+  "vscode-neovim.neovimInitVimPaths.darwin": "~\/.config\/nvim\/init.vim",
   "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
   "[go]": {
     "editor.tabSize": 4
   },
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
-  }
+  },
+  "editor.bracketPairColorization.enabled": false
 }
