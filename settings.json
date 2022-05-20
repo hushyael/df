@@ -4,11 +4,14 @@
   "editor.minimap.enabled": false,
   "editor.cursorSmoothCaretAnimation": true,
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "editor.formatOnSave": true,
   "editor.smoothScrolling": true,
   "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.indentation": false,
   "editor.scrollBeyondLastLine": true,
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
@@ -21,6 +24,7 @@
   "workbench.fontAliasing": "antialiased",
   "workbench.preferredLightColorTheme": "mlia light",
   "workbench.preferredDarkColorTheme": "mlia dark",
+  "workbench.layoutControl.enabled": false,
   "workbench.colorTheme": "mlia light",
   "window.autoDetectColorScheme": true,
   "vscode-neovim.useCtrlKeysForNormalMode": true,
@@ -28,10 +32,6 @@
   "vscode-neovim.neovimInitVimPaths.darwin": "~\/.config\/nvim\/init.vim",
   "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
   "[go]": {
-    "editor.tabSize": 4
-  },
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
-  "editor.bracketPairColorization.enabled": false
+    "editor.tabSize": 4,
+  }
 }
