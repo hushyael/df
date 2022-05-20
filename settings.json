@@ -24,14 +24,16 @@
   "workbench.fontAliasing": "antialiased",
   "workbench.preferredLightColorTheme": "mlia light",
   "workbench.preferredDarkColorTheme": "mlia dark",
-  "workbench.layoutControl.enabled": false,
   "workbench.colorTheme": "mlia light",
+  "workbench.layoutControl.enabled": false,
   "window.autoDetectColorScheme": true,
   "vscode-neovim.useCtrlKeysForNormalMode": true,
   "vscode-neovim.useCtrlKeysForInsertMode": true,
   "vscode-neovim.neovimInitVimPaths.darwin": "~\/.config\/nvim\/init.vim",
   "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.enablePersistentSessions": false,
   "[go]": {
     "editor.tabSize": 4,
-  }
+  },
 }
