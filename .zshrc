@@ -1,4 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
 
 plugins=(git)
 
