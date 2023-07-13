@@ -9,7 +9,6 @@
   "editor.bracketPairColorization.enabled": false,
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.detectIndentation": false,
-  "workbench.startupEditor": "none",
   "workbench.editor.tabCloseButton": "left",
   "workbench.panel.opensMaximized": "always",
   "workbench.layoutControl.enabled": false,
@@ -21,7 +20,6 @@
   "terminal.integrated.tabs.location": "left",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.enablePersistentSessions": false,
-  "terminal.integrated.cursorBlinking": true,
 
   "vscode-neovim.neovimInitVimPaths.darwin": "~\/.config\/nvim\/init.vim",
   "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
