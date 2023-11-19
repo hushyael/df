@@ -28,6 +28,10 @@ require("neo-tree").setup({
 	},
 	default_component_configs = {
 		indent = { with_markers = false, indent_size = 2 },
+		modified = {
+			symbol = "",
+			highlight = "NeoTreeModified",
+		},
 	},
 	renderers = {
     directory = {
@@ -56,15 +60,15 @@ require("neo-tree").setup({
 						align = "right",
 						hide_when_expanded = false,
 						symbols = {
-								added     = "",
-								deleted   = "",
-								modified  = "",
-								renamed   = "",
-								untracked = "",
-								ignored   = "",
-								conflict  = "",
-								unstaged  = "",
-								staged    = "",
+								added     = "",
+								deleted   = "",
+								modified  = "",
+								renamed   = "",
+								untracked = "",
+								ignored   = "",
+								conflict  = "",
+								unstaged  = "",
+								staged    = "",
 						},
 					},
           { "name", zindex = 10 },

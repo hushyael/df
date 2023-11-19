@@ -24,6 +24,12 @@ local lsp_deps = {
 }
 
 require("lazy").setup({
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v3.x",
@@ -45,9 +51,10 @@ require("lazy").setup({
       "MunifTanjim/nui.nvim",
 		}
 	},
+	{"sindrets/diffview.nvim"},
   {"simrat39/rust-tools.nvim"},
 	{"wellle/targets.vim"},
-	{"m4xshen/autoclose.nvim"},
+	{"m4xshen/autoclose.nvim", config = true},
   {"folke/trouble.nvim"},
 	{"romainl/vim-cool"},
 	{"tpope/vim-fugitive"},

@@ -2,14 +2,17 @@ local expr = {silent = true, expr = true, remap = false}
 local builtin = require('telescope.builtin')
 
 -- navigation
-vim.keymap.set('n', '<leader>E', ':Neotree toggle<CR>', { silent = true, remap = false })
+vim.keymap.set('n', '<leader>E', ':Neotree toggle left<CR>', { silent = true, remap = false })
 
 -- search
 vim.keymap.set('n', '<leader>F', ':Ag ')
 vim.keymap.set('n', '<leader>f', '/')
 
+-- vim.api.nvim_buf_set_option('n', '<C-e>', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>' { noremap=true, silent=true })
+
 -- diagnostics
 vim.keymap.set('n', '<leader>j', function() require('trouble').toggle('workspace_diagnostics') end)
+vim.keymap.set('n', '<C-e>', vim.diagnostic.open_float)
 
 -- buffers management
 vim.keymap.set('n', '<C-Tab>', ':bnext<CR>')

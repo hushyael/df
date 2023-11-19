@@ -1,16 +1,14 @@
 require('lualine').setup({
     options = {
+        disabled_filetypes = {'neo-tree'},
+        theme = 'auto',
         component_separators = '',
         section_separators = '',
-        icons_enabled = false,
-        theme = 'auto',
-        disabled_filetypes = {'NVimTree'},
         ignore_focus = {},
+        icons_enabled = false,
         always_divide_middle = true,
         globalstatus = true,
-        refresh = {
-            statusline = 1000,
-        }
+        refresh = { statusline = 1000 }
     },
     sections = {
       lualine_a = {'filename'},
@@ -20,8 +18,5 @@ require('lualine').setup({
       lualine_y = {},
       lualine_z = {},
     },
-    extensions = {
-        'nvim-tree',
-        'lazy',
-    }
+    extensions = { 'neo-tree', 'lazy' }
 })

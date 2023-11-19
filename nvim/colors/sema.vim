@@ -92,7 +92,13 @@ hi NvimTreeOpenedFile                guifg=#D6D4A6     guibg=NONE     gui=NONE
 
 " Diagnostics
 hi DiagnosticError 			 		 guifg=#FDA293
-hi DiagnosticUnderlineError          guifg=#FDA293     gui=undercurl  guisp=#C74E39
 hi DiagnosticWarn             		 guifg=#FEBF6E
+hi DiagnosticUnderlineError          guifg=#CCCCCC     gui=undercurl  guisp=#C74E39
 hi DiagnosticUnderlineWarn 			 guifg=#CCCCCC     gui=undercurl  guisp=#FEBF6E
-hi DiagnosticUnnecessary 			 guifg=#CCCCCC	   gui=undercurl  guisp=#C74E39
+hi DiagnosticUnnecessary 			 guifg=#626262	   gui=undercurl  guisp=#C74E39
+
+" Diff
+hi DiffAdd        guibg=#203b30
+hi DiffChange     guibg=#1f2231
+hi DiffDelete  guifg=#656565   guibg=#37222c
+hi DiffText       guibg=#394b70

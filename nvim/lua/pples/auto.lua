@@ -65,11 +65,12 @@ autocmd('LspAttach', {
 		vim.diagnostic.config({ underline = true, virtual_text = true, virtual_lines = true, signs = false })
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', '<C-i>', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', '<C-r>', vim.lsp.buf.references, opts)
     vim.keymap.set('n', '<C-o>', vim.lsp.buf.definition, opts)
-    vim.keymap.set('n', '<C-t>', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', '<C-O>', vim.lsp.buf.type_definition, opts)
 	  vim.keymap.set('n', '<C-k>', vim.lsp.buf.hover, opts)
+		vim.keymap.set('n', '<C-s>', vim.lsp.buf.signature_help, opts)
 	  vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, opts)
   end
 })
