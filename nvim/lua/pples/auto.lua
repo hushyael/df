@@ -4,6 +4,15 @@ local autocmd = vim.api.nvim_create_autocmd
 local pples_group = augroup('pples', {})
 local yank_group = augroup('HighlightYank', {})
 
+-- 2 spaces for selected filetypes
+autocmd('FileType', {
+  pattern = 'xml,html,xhtml,css,scss,javascript,lua,yaml,htmljinja',
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end
+})
+
 -- highlight on yank
 autocmd('TextYankPost', {
   group = yank_group,
@@ -23,16 +32,7 @@ autocmd('BufWritePre', {
   command = [[%s/\s\+$//e]],
 })
 
--- 2 spaces for selected filetypes
-autocmd('FileType', {
-  pattern = 'xml,html,xhtml,css,scss,javascript,lua,yaml,htmljinja',
-  callback = function()
-    vim.opt_local.shiftwidth = 2
-    vim.opt_local.tabstop = 2
-  end
-})
-
--- go: format and organize imports on save
+-- organize go imports on save
 autocmd('BufWritePre', {
   pattern = { '*.go' },
   callback = function()
@@ -56,27 +56,20 @@ autocmd('BufWritePre', {
   end
 })
 
--- go: bindings setup
+-- gopls setup
 autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
 
   callback = function(ev)
+    local opts = { buffer = ev.buf }
+		vim.diagnostic.config({ underline = true, virtual_text = true, virtual_lines = true, signs = false })
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-    local opts = { buffer = ev.buf }
-    vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-
-    vim.keymap.set('n', '<leader>o', vim.lsp.buf.definition, opts)
-    vim.keymap.set('n', '<leader>h', vim.lsp.buf.signature_help, opts)
-
-		vim.diagnostic.config({ underline = true, virtual_text = false, virtual_lines = false, signs = false })
-
-    vim.keymap.set('n', '<leader>d', vim.lsp.buf.type_definition, opts)
-    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-    vim.keymap.set('n', '<leader>f>', function()
-      vim.lsp.buf.format { async = true }
-    end, opts)
+    vim.keymap.set('n', '<C-o>', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', '<C-t>', vim.lsp.buf.type_definition, opts)
+	  vim.keymap.set('n', '<C-k>', vim.lsp.buf.hover, opts)
+	  vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, opts)
   end
 })

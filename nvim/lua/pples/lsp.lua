@@ -30,26 +30,26 @@ require('lspconfig').gopls.setup({
     ih.on_attach(c, b)
   end,
   settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
-        shadow = true,
-      },
-      usePlaceholders = true,
-      staticcheck = true,
-      semanticTokens = true,
+		gopls = {
+			analyses = {
+				unusedparams = true,
+				shadow = true,
+			},
+			usePlaceholders = true,
+			staticcheck = true,
+			semanticTokens = true,
 			completeUnimported = true
-    }
+	}
   }
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] =
-    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-        underline = true,
-        virtual_text = false,
-        signs = false,
-        update_in_insert = false
-    })
+	vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+			underline = true,
+			virtual_text = false,
+			signs = false,
+			update_in_insert = false
+	})
 
 cmp.setup({
   format = cmp_format,

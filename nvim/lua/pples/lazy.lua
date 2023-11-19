@@ -11,7 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 local lsp_deps = {
   "neovim/nvim-lspconfig",
   "saadparwaiz1/cmp_luasnip",
@@ -38,30 +37,27 @@ require("lazy").setup({
       require("go").setup({})
     end
   },
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    init = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-    end
-  },
 	{
-		"kelly-lin/telescope-ag",
-		dependencies = { "nvim-telescope/telescope.nvim" },
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+		}
 	},
-
+  {"simrat39/rust-tools.nvim"},
 	{"wellle/targets.vim"},
+	{"m4xshen/autoclose.nvim"},
+  {"folke/trouble.nvim"},
 	{"romainl/vim-cool"},
-	{"tpope/vim-endwise"},
+	{"tpope/vim-fugitive"},
 	{"tpope/vim-surround"},
 	{"tpope/vim-commentary"},
   {"nvim-lualine/lualine.nvim"},
   {"nvim-tree/nvim-web-devicons"},
-  {"simrat39/rust-tools.nvim"},
-  {"nvim-tree/nvim-tree.lua"},
-  {"folke/trouble.nvim", icons = false},
   {"nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }},
   {"nvim-treesitter/nvim-treesitter", dependencies = { "nvim-treesitter/nvim-treesitter-context" }, run = ":TSUpdate"},
+	{"kelly-lin/telescope-ag", dependencies = { "nvim-telescope/telescope.nvim" }},
+	{'akinsho/git-conflict.nvim', version = "*", config = true},
 })
 

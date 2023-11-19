@@ -24,18 +24,11 @@ hi MatchParen                        guifg=#222222    guibg=#CCCCCC    gui=NONE
 hi LineNr                            guifg=#626262    guibg=#222222    gui=NONE
 hi CursorLineNr                      guifg=#CCCCCC    guibg=#222222    gui=NONE
 hi StatusLine                        guifg=#CCCCCC    guibg=#222222    gui=NONE
+hi WarningMsg                        guifg=orange     guibg=NONE       gui=NONE
+hi ErrorMsg                          guifg=#FDA293    guibg=NONE	   gui=NONE
+hi Error                             guifg=#FDA293    guibg=NONE       gui=NONE
+hi TSError                           guifg=#FDA293    guibg=NONE       gui=NONE
 hi EndOfBuffer                       guifg=bg         guibg=bg         gui=NONE
-hi WarningMsg                        guifg=white      guibg=#FDA293    gui=BOLD
-hi ErrorMsg                          guifg=#FDA293    guibg=NONE
-hi Error                             guifg=#FDA293    guibg=NONE
-hi TSError                           guifg=#FDA293    guibg=NONE
-hi DiagnosticError 			 		 guifg=#FDA293    guibg=NONE
-hi DiagnosticUnderlineError          guifg=#FDA293    guibg=NONE
-hi DiagnosticUnnecessary             guifg=#FDA293    guibg=#FDA293
-hi DiagnosticUnderlineError          guifg=#FDA293    guibg=NONE
-hi DiagnosticUnderlineError          guifg=#FDA293    guibg=NONE
-hi DiagnosticUnderlineError          guifg=#FDA293    guibg=NONE
-hi DiagnosticUnderlineError          guifg=#FDA293    guibg=NONE
 
 " Syntax highlighting
 hi Statement                         guifg=#AED7F5    guibg=NONE    gui=NONE
@@ -53,7 +46,8 @@ hi @keyword.function                 guifg=#AED7F5
 hi @keyword.operator                 guifg=#CCCCCC
 hi @keyword.type                     guifg=#D6D4A6
 hi @keyword.control                  guifg=#6BCBF7
-hi @error                            guifg=#FDA293
+hi @field.go                         guifg=#CCCCF8
+hi @error                            guifg=#FDA293    gui=undercurl guisp=#C74E39
 
 " Semantic tokens
 hi @lsp.type.function                guifg=#CCCCCC
@@ -72,19 +66,33 @@ hi @lsp.type.variable                guifg=#CCCCCC
 hi @lsp.type.operator          	     guifg=#CCCCCC
 hi @lsp.type.namespace         	     guifg=#CCCCCC
 hi @lsp.type.selfTypeKeyword         guifg=#AED7F5
-
-hi @lsp.mod.mutable                  gui=undercurl
 hi @lsp.mod.trait                    guifg=#6BCBF7
+hi @lsp.mod.mutable                  gui=undercurl
 
 " NvimTree
-hi NvimTreeSpecialFile               guifg=#CCCCCC     guibg=#222222     gui=NONE
-hi NvimTreeImageFile                 guifg=#CCCCCC     guibg=#222222     gui=NONE
-hi NvimTreeOpenedFile                guifg=#D6D4A6     guibg=NONE        gui=NONE
+hi NvimTreeSpecialFile               guifg=#CCCCCC     guibg=NONE     gui=NONE
+hi NvimTreeImageFile                 guifg=#CCCCCC     guibg=NONE     gui=NONE
+hi NvimTreeOpenedFile                guifg=#D6D4A6     guibg=NONE     gui=NONE
+	" Git
+	hi NvimTreeGitDirty              guifg=#D6D4A6     guibg=NONE     gui=NONE
+	hi NvimTreeGitNew                guifg=#BEDD9F     guibg=NONE     gui=NONE
+	hi NvimTreeGitStaged             guifg=#D6D4A6     guibg=NONE     gui=NONE
+	hi NvimTreeGitDirty              guifg=#D6D4A6     guibg=NONE     gui=NONE
+	hi NvimTreeGitDeleted            guifg=#FDA293     guibg=NONE     gui=NONE
+	hi NvimTreeGitMerge              guifg=#CCCCF8     guibg=NONE     gui=NONE
 
-" Diff
+" Neotree
+	" Git
+	hi NeoTreeGitAdded				 guifg=#BEDD9F     guibg=NONE     gui=NONE
+	hi NeoTreeGitUntracked			 guifg=#BEDD9F     guibg=NONE     gui=NONE
+	hi NeoTreeGitConflict			 guifg=#CCCCF8     guibg=NONE     gui=NONE
+	hi NeoTreeGitDeleted			 guifg=#FDA293     guibg=NONE     gui=NONE
+	hi NeoTreeGitIgnored			 guifg=#8C8C8C     guibg=NONE     gui=NONE
+	hi NeoTreeGitModified			 guifg=#E2C08D     guibg=NONE     gui=NONE
 
 " Diagnostics
-hi DiagnosticUnnecessary             guifg=NONE
-hi DiagnosticUnderlineError 		 guisp=#FDA293 gui=underline
-
-" Telescope
+hi DiagnosticError 			 		 guifg=#FDA293
+hi DiagnosticUnderlineError          guifg=#FDA293     gui=undercurl  guisp=#C74E39
+hi DiagnosticWarn             		 guifg=#FEBF6E
+hi DiagnosticUnderlineWarn 			 guifg=#CCCCCC     gui=undercurl  guisp=#FEBF6E
+hi DiagnosticUnnecessary 			 guifg=#CCCCCC	   gui=undercurl  guisp=#C74E39
