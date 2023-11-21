@@ -30,8 +30,6 @@
     "editor.lineHeight": 1.5,
     "editor.fontLigatures": false,
     "editor.formatOnSave": true,
-    "go.inlayHints.functionTypeParameters": true,
-    "go.inlayHints.parameterNames": true,
     // PLUGINS SETUP
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.defaultDateStyle": "absolute",
