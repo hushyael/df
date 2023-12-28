@@ -1,47 +1,46 @@
 {
     // DISABLE ALL OF THE USELESS ANNOYING UI SHIT
+    "window.commandCenter": false,
     "workbench.activityBar.location": "hidden",
     "workbench.tree.renderIndentGuides": "none",
     "workbench.startupEditor": "none",
+    "explorer.compactFolders": false,
     "workbench.editor.showTabs": "single",
     "workbench.panel.opensMaximized": "always",
+    "workbench.layoutControl.enabled": false,
     "editor.renderWhitespace": "none",
     "editor.snippetSuggestions": "none",
-    "workbench.layoutControl.enabled": false,
-    "workbench.statusBar.visible": false,
     "editor.bracketPairColorization.enabled": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.guides.indentation": false,
-    "editor.inlayHints.fontSize": 12,
     "editor.folding": false,
     "editor.minimap.enabled": false,
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "window.commandCenter": false,
-    // WRITING & EYES
-    "workbench.iconTheme": "eq-material-theme-icons-light",
-    "workbench.colorTheme": "sema soft chroma",
-    "editor.fontFamily": "MonoLisa",
+    // EYES
+    "workbench.colorTheme": "sema soft",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "editor.fontFamily": "Monolisa",
     "editor.fontSize": 14,
     "editor.tabSize": 4,
     "editor.lineHeight": 1.5,
     "editor.fontLigatures": false,
     "editor.formatOnSave": true,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
     // PLUGINS SETUP
+    "errorLens.onSaveTimeout": 500,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.defaultDateStyle": "absolute",
     "gitlens.codeLens.enabled": false,
     "gitlens.mode.statusBar.enabled": false,
     "gitlens.menus": false,
-    "gitlens.terminalLinks.enabled": false,
-    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.vscode/nvim/init.lua",
     "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
+    "vscode-neovim.neovimClean": true,
     "go.gopath": "/Users/peopleequalshit/code/go",
     "go.toolsManagement.autoUpdate": true,
     "go.terminal.activateEnvironment": false,
@@ -51,6 +50,9 @@
     "go.lintFlags": [
         "-checks=all"
     ],
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
     "gopls": {
         "ui.semanticTokens": true,
         "ui.diagnostic.staticcheck": true,
@@ -59,5 +61,11 @@
     "files.exclude": {
         "**/.git": true,
         "**/.DS_Store": true
-    }
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "comment": "#FDA293",
+            "*.readonly": "#F4C1CF",
+        }
+    },
 }
