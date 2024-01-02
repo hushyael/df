@@ -1,13 +1,22 @@
 {
     // DISABLE ALL OF THE USELESS ANNOYING UI SHIT
     "window.commandCenter": false,
-    "workbench.activityBar.location": "hidden",
     "workbench.tree.renderIndentGuides": "none",
     "workbench.startupEditor": "none",
     "explorer.compactFolders": false,
     "workbench.editor.showTabs": "single",
     "workbench.panel.opensMaximized": "always",
     "workbench.layoutControl.enabled": false,
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.location": "hidden",
+    // "window.titleBarStyle": "native",
+    // "apc.electron": {
+    //     "titleBarStyle": "hiddenInset",
+    //     // "trafficLightPosition": {
+    //     //     "x": 11,
+    //     //     "y": 10
+    //     // }
+    // },
     "editor.renderWhitespace": "none",
     "editor.snippetSuggestions": "none",
     "editor.bracketPairColorization.enabled": false,
@@ -20,9 +29,8 @@
     "editor.scrollbar.vertical": "hidden",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    // EYES
+    // EYES & WRITING
     "workbench.colorTheme": "sema soft",
-    "workbench.iconTheme": "eq-material-theme-icons-darker",
     "editor.fontFamily": "Monolisa",
     "editor.fontSize": 14,
     "editor.tabSize": 4,
@@ -33,11 +41,6 @@
     "editor.cursorSmoothCaretAnimation": "on",
     // PLUGINS SETUP
     "errorLens.onSaveTimeout": 500,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.defaultDateStyle": "absolute",
-    "gitlens.codeLens.enabled": false,
-    "gitlens.mode.statusBar.enabled": false,
-    "gitlens.menus": false,
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.vscode/nvim/init.lua",
     "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
     "vscode-neovim.neovimClean": true,
@@ -50,17 +53,13 @@
     "go.lintFlags": [
         "-checks=all"
     ],
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
     "gopls": {
         "ui.semanticTokens": true,
         "ui.diagnostic.staticcheck": true,
         "ui.completion.usePlaceholders": true,
     },
-    "files.exclude": {
-        "**/.git": true,
-        "**/.DS_Store": true
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
     },
     "editor.semanticTokenColorCustomizations": {
         "rules": {
