@@ -1,6 +1,9 @@
 {
     // DISABLE ALL OF THE USELESS ANNOYING UI SHIT
     "window.commandCenter": false,
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.startupEditor": "none",
     "workbench.layoutControl.enabled": false,
     "workbench.editor.showTabs": "single",
     "workbench.panel.opensMaximized": "always",
@@ -20,7 +23,6 @@
     "explorer.compactFolders": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    // WRITING & EYES
     "editor.fontFamily": "Monolisa",
     "editor.fontSize": 14,
     "editor.tabSize": 4,
@@ -28,41 +30,41 @@
     "editor.semanticTokenColorCustomizations": {
         "[swhl light]": {
             "rules": {
-                "comment": "008000",
-                "keyword": "100F0F",
-                "type": "100F0F",
-                "type.defaultLibrary": "100F0F",
-                "string": "100F0F",
-                "number": "#100F0F",
-                "namespace": "100F0F",
-                "*.readonly": "#7A3E9D",
-                "variable.readonly": "#7A3E9D"
+                "comment": "#448C27",
+                "keyword": "#7A3E9D",
+                "type": "#797430",
+                "type.defaultLibrary": "#797430",
+                "string": "#A31515",
+                "number": "#5855a5",
+                "namespace": "#797430",
+                "*.readonly": "#5855a5",
+                "variable.readonly": "#5855a5"
             }
         },
         "[swhl soft]": {
             "rules": {
                 "comment": "#6A9955",
                 "keyword": "#D28BA6",
-                "type": "#CECDC3",
-                "type.defaultLibrary": "#CECDC3",
-                "string": "#CECDC3",
-                "number": "#A28EEB",
-                "namespace": "#CECDC3",
-                "*.readonly": "#A28EEB",
-                "variable.readonly": "#A28EEB"
+                "type": "#DCDCAA",
+                "type.defaultLibrary": "#DCDCAA",
+                "string": "#CE9178",
+                "number": "#B6B6DF",
+                "namespace": "#DCDCAA",
+                "*.readonly": "#B6B6DF",
+                "variable.readonly": "#B6B6DF"
             }
         },
         "[swhl dark]": {
             "rules": {
                 "comment": "#6A9955",
                 "keyword": "#D28BA6",
-                "type": "#CECDC3",
-                "type.defaultLibrary": "#CECDC3",
-                "string": "#CECDC3",
-                "number": "#A28EEB",
-                "namespace": "#CECDC3",
-                "*.readonly": "#A28EEB",
-                "variable.readonly": "#A28EEB"
+                "type": "#DCDCAA",
+                "type.defaultLibrary": "#DCDCAA",
+                "string": "#CE9178",
+                "number": "#B6B6DF",
+                "namespace": "#DCDCAA",
+                "*.readonly": "#B6B6DF",
+                "variable.readonly": "#B6B6DF"
             }
         }
     },
@@ -82,7 +84,7 @@
                 {
                     "scope": "entity.name.import",
                     "settings": {
-                        "foreground": "#BEDD9F"
+                        "foreground": "#CE9178"
                     }
                 }
             ]
@@ -92,7 +94,7 @@
                 {
                     "scope": "entity.name.import",
                     "settings": {
-                        "foreground": "#BEDD9F"
+                        "foreground": "#CE9178"
                     }
                 }
             ]
@@ -118,23 +120,17 @@
         }
     },
     // PLUGINS SETUP
-    "errorLens.onSaveTimeout": 250,
-    "vscode-neovim.neovimInitVimPaths.darwin": "~/.vscode/nvim/init.lua",
-    "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
-    "vscode-neovim.neovimClean": true,
     "extensions.ignoreRecommendations": true,
+    "errorLens.onSaveTimeout": 200,
+    "vscode-neovim.neovimClean": true,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
-    "workbench.startupEditor": "none",
     "gitlens.plusFeatures.enabled": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
     "gitlens.telemetry.enabled": false,
     "gitlens.rebaseEditor.ordering": "asc",
-    "workbench.statusBar.visible": false,
-    "workbench.activityBar.location": "hidden",
-    "buf.binaryPath": "/opt/homebrew/Cellar/buf/1.28.1/bin/buf",
-    "workbench.colorTheme": "swhl soft"
+    "workbench.colorTheme": "swhl light"
 }
