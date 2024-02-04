@@ -56,11 +56,6 @@
     "when": "workbench.panel.markers.view.active"
   },
   {
-    "key": "shift+cmd+m",
-    "command": "-workbench.actions.view.problems",
-    "when": "workbench.panel.markers.view.active"
-  },
-  {
     "key": "shift+cmd+t",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
@@ -69,5 +64,25 @@
     "key": "shift+s",
     "command": "explorer.openToSide",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
+    "key": "g ]",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible && neovim.ctrlKeysNormal.g && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "g [",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible && neovim.ctrlKeysNormal.g && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "e ]",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus && neovim.ctrlKeysNormal.e && neovim.init && neovim.mode != 'insert'"
+  },
+  {
+    "key": "e [",
+    "command": "editor.action.marker.prev",
+    "when": "editorFocus && neovim.ctrlKeysNormal.e && neovim.init && neovim.mode != 'insert'"
   }
 ]

@@ -1,0 +1,140 @@
+{
+    // DISABLE ALL OF THE USELESS ANNOYING UI SHIT
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.showTabs": "single",
+    "workbench.panel.opensMaximized": "always",
+    "workbench.tree.renderIndentGuides": "none",
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.folding": false,
+    "editor.minimap.enabled": false,
+    "editor.selectionHighlight": false,
+    "editor.guides.indentation": false,
+    "editor.renderWhitespace": "none",
+    "editor.snippetSuggestions": "none",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // WRITING & EYES
+    "editor.fontFamily": "Monolisa",
+    "editor.fontSize": 14,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.semanticTokenColorCustomizations": {
+        "[swhl light]": {
+            "rules": {
+                "comment": "008000",
+                "keyword": "100F0F",
+                "type": "100F0F",
+                "type.defaultLibrary": "100F0F",
+                "string": "100F0F",
+                "number": "#100F0F",
+                "namespace": "100F0F",
+                "*.readonly": "#7A3E9D",
+                "variable.readonly": "#7A3E9D"
+            }
+        },
+        "[swhl soft]": {
+            "rules": {
+                "comment": "#6A9955",
+                "keyword": "#D28BA6",
+                "type": "#CECDC3",
+                "type.defaultLibrary": "#CECDC3",
+                "string": "#CECDC3",
+                "number": "#A28EEB",
+                "namespace": "#CECDC3",
+                "*.readonly": "#A28EEB",
+                "variable.readonly": "#A28EEB"
+            }
+        },
+        "[swhl dark]": {
+            "rules": {
+                "comment": "#6A9955",
+                "keyword": "#D28BA6",
+                "type": "#CECDC3",
+                "type.defaultLibrary": "#CECDC3",
+                "string": "#CECDC3",
+                "number": "#A28EEB",
+                "namespace": "#CECDC3",
+                "*.readonly": "#A28EEB",
+                "variable.readonly": "#A28EEB"
+            }
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[swhl light]": {
+            "textMateRules": [
+                {
+                    "scope": "entity.name.import",
+                    "settings": {
+                        "foreground": "#448C27"
+                    }
+                }
+            ]
+        },
+        "[swhl soft]": {
+            "textMateRules": [
+                {
+                    "scope": "entity.name.import",
+                    "settings": {
+                        "foreground": "#BEDD9F"
+                    }
+                }
+            ]
+        },
+        "[swhl dark]": {
+            "textMateRules": [
+                {
+                    "scope": "entity.name.import",
+                    "settings": {
+                        "foreground": "#BEDD9F"
+                    }
+                }
+            ]
+        }
+    },
+    // GO SETTINGS
+    "go.gopath": "/Users/pples/code/go",
+    "go.toolsManagement.autoUpdate": true,
+    "go.terminal.activateEnvironment": false,
+    "go.coverOnTestPackage": false,
+    "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "-checks=all"
+    ],
+    "gopls": {
+        "ui.semanticTokens": true,
+        "ui.diagnostic.staticcheck": true,
+        "ui.completion.usePlaceholders": true,
+        "ui.diagnostic.analyses": {
+            "unusedvariable": true,
+            "unusedparameter": true
+        }
+    },
+    // PLUGINS SETUP
+    "errorLens.onSaveTimeout": 250,
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.vscode/nvim/init.lua",
+    "vscode-neovim.neovimExecutablePaths.darwin": "\/opt\/homebrew\/bin\/nvim",
+    "vscode-neovim.neovimClean": true,
+    "extensions.ignoreRecommendations": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.startupEditor": "none",
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.telemetry.enabled": false,
+    "gitlens.rebaseEditor.ordering": "asc",
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.location": "hidden",
+    "buf.binaryPath": "/opt/homebrew/Cellar/buf/1.28.1/bin/buf",
+    "workbench.colorTheme": "swhl soft"
+}
