@@ -1,0 +1,104 @@
+[
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrev",
+      "l": "project_panel::Open",
+      "h": "project_panel::CollapseSelectedEntry",
+      "a": "project_panel::NewFile",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "shift-p": "project_panel::CopyPath",
+      "shift-a": "project_panel::NewDirectory",
+      "cmd-shift-h": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "e ]": "editor::GoToDiagnostic",
+      "e [": "editor::GoToPrevDiagnostic",
+      "ctrl-h": [
+        "workspace::ActivatePaneInDirection",
+        "Left"
+      ],
+      "ctrl-l": [
+        "workspace::ActivatePaneInDirection",
+        "Right"
+      ],
+      "ctrl-k": [
+        "workspace::ActivatePaneInDirection",
+        "Up"
+      ],
+      "ctrl-j": [
+        "workspace::ActivatePaneInDirection",
+        "Down"
+      ]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "ctrl-i": "editor::GoToImplementation",
+      "ctrl-o": "editor::GoToDefinition",
+      "ctrl-r": "editor::FindAllReferences",
+      "shift-k": "editor::Hover",
+      "cmd-shift-h": "editor::ToggleHunkDiff"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-[": "vim::NormalBefore"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-shift-e": "project_panel::ToggleFocus",
+      "cmd-shift-t": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "tab_switcher::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "g c a": "editor::ToggleCodeActions",
+      "g c c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "g c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-h": [
+        "workspace::ActivatePaneInDirection",
+        "Left"
+      ],
+      "ctrl-l": [
+        "workspace::ActivatePaneInDirection",
+        "Right"
+      ],
+      "ctrl-k": [
+        "workspace::ActivatePaneInDirection",
+        "Up"
+      ],
+      "ctrl-j": [
+        "workspace::ActivatePaneInDirection",
+        "Down"
+      ]
+    }
+  }
+]

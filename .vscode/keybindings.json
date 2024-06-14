@@ -78,11 +78,11 @@
   {
     "key": "e ]",
     "command": "editor.action.marker.next",
-    "when": "editorFocus && neovim.ctrlKeysNormal.e && neovim.init && neovim.mode != 'insert'"
+    "when": "editorFocus && !findInputFocussed && neovim.ctrlKeysNormal.e && neovim.init && neovim.mode != 'insert'"
   },
   {
     "key": "e [",
     "command": "editor.action.marker.prev",
-    "when": "editorFocus && neovim.ctrlKeysNormal.e && neovim.init && neovim.mode != 'insert'"
+    "when": "editorFocus && !findInputFocussed && neovim.ctrlKeysNormal.e && neovim.init && neovim.mode != 'insert'"
   }
 ]

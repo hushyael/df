@@ -1,0 +1,90 @@
+{
+  "show_copilot_suggestions": false,
+  "show_call_status_icon": false,
+  "cursor_blink": false,
+  "assistant": {
+    "version": "1",
+    "button": false
+  },
+  "features": {
+    "copilot": false
+  },
+  "indent_guides": {
+    "enabled": false
+  },
+  "project_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "tab_bar": {
+    "show": false,
+    "show_nav_history_buttons": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false
+  },
+  "theme": "eve",
+  "ui_font_family": "MonoLisa",
+  "buffer_font_family": "MonoLisa",
+  "show_whitespaces": "none",
+  "vim_mode": true,
+  "ui_font_size": 14,
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "buffer_font_size": 14,
+  "buffer_font_features": {
+    "liga": false
+  },
+  "language_overrides": {
+    "Go": {
+      "formatter": {
+        "external": {
+          "command": "goimports",
+          "arguments": []
+        }
+      }
+    }
+  },
+  "lsp": {
+    "gopls": {
+      "ui.diagnostic.staticcheck": true,
+      "ui.completion.usePlaceholders": true,
+      "ui.diagnostic.analyses": {
+        "unusedvariable": true,
+        "unusedparameter": true
+      }
+    }
+  },
+  "terminal": {
+    "font_family": "MonoLisa",
+    "font_size": 13,
+    "button": false,
+    "env": {}
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "experimental.theme_overrides": {
+    "syntax": {
+      "constant": {
+        "color": "#CCCCF8"
+      },
+      "boolean": {
+        "color": "#CCCCF8"
+      },
+      "number": {
+        "color": "#CCCCF8"
+      }
+    }
+  }
+}
