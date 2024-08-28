@@ -6,19 +6,21 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=/opt/homebrew/bin:$PATH
 export LC_ALL=en_US.UTF-8
 
+source <(fzf --zsh)
 source $ZSH/oh-my-zsh.sh
 
-setopt INC_APPEND_HISTORY     # Immediately append to history file.
-setopt HIST_EXPIRE_DUPS_FIRST # Expire duplicate entries first when trimming history.
-setopt HIST_IGNORE_DUPS       # Dont record an entry that was just recorded again.
-setopt HIST_IGNORE_ALL_DUPS   # Delete old recorded entry if new entry is a duplicate.
-setopt HIST_FIND_NO_DUPS      # Do not display a line previously found.
-setopt HIST_IGNORE_SPACE      # Dont record an entry starting with a space.
-setopt HIST_SAVE_NO_DUPS      # Dont write duplicate entries in the history file.
-
 PROMPT="$ "
+
+setopt INC_APPEND_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
 
 alias ..="cd .."
 alias c="clear"
 alias f="pwd"
 alias b="git rev-parse --abbrev-ref HEAD"
+alias pl="sudo lsof -i -P | grep -i \"listen\""
