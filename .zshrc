@@ -1,4 +1,4 @@
-plugins=(git gitfast fzf)
+plugins=(git gitfast fzf z)
 
 export ZSH="$HOME/.oh-my-zsh"
 export GOPATH="$HOME/code/go"
@@ -22,5 +22,15 @@ setopt HIST_SAVE_NO_DUPS
 alias ..="cd .."
 alias c="clear"
 alias f="pwd"
+alias n="nvim"
 alias b="git rev-parse --abbrev-ref HEAD"
-alias pl="sudo lsof -i -P | grep -i \"listen\""
+
+cover () {
+  t=$(mktemp)
+  go test $COVERFLAGS -race -coverprofile=$t $@ && go tool cover -func=$t && unlink $t
+}
+
+coverweb() {
+  t=$(mktemp)
+  go test $COVERFLAGS -coverprofile=$t $@ && go tool cover -html=$t && unlink $t
+}
