@@ -47,7 +47,8 @@
 			"ctrl-r": "editor::FindAllReferences",
 			"shift-k": "editor::Hover",
 			"cmd-shift-h": "editor::ToggleHunkDiff",
-			"cmd-shift-r": "editor::RevertSelectedHunks"
+			"cmd-shift-r": "editor::RevertSelectedHunks",
+			", s": "pane::SplitRight"
 		}
 	},
 	{

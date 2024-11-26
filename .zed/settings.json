@@ -1,7 +1,7 @@
 {
-	"theme": "pph dark",
-	"show_whitespaces": "none",
+	"theme": "pph light",
 	"vim_mode": true,
+	"cursor_blink": false,
 	"formatter": "language_server",
 	"tab_size": 2,
 	"hard_tabs": true,
@@ -9,19 +9,14 @@
 	"ui_font_size": 14,
 	"buffer_font_family": "MonoLisa",
 	"buffer_font_size": 14,
-	"buffer_font_features": {
-		"liga": false
-	},
-	"vim": {
-		"use_system_clipboard": "on_yank"
-	},
+	"show_whitespaces": "none",
+	"show_call_status_icon": false,
 	"languages": {
 		"Go": {
 			"tab_size": 4,
 			"formatter": {
 				"external": {
-					"command": "goimports",
-					"arguments": []
+					"command": "goimports"
 				}
 			}
 		},
@@ -33,10 +28,24 @@
 		"gopls": {
 			"ui.diagnostic.staticcheck": true,
 			"ui.completion.usePlaceholders": true,
-			"ui.diagnostic.analyses": {
-				"unusedvariable": true,
-				"unusedparameter": true
+			"initialization_options": {
+				"usePlaceholders": true,
+				"buildFlags": [
+					"-tags=acceptance"
+				]
 			}
+		}
+	},
+	"project_panel": {
+		"button": false,
+		"folder_icons": false,
+		"auto_fold_dirs": false,
+		"show_diagnostics": "all",
+		"scrollbar": {
+			"show": "never"
+		},
+		"indent_guides": {
+			"show": "never"
 		}
 	},
 	"terminal": {
@@ -45,30 +54,29 @@
 		"button": false,
 		"env": {}
 	},
-	"show_copilot_suggestions": true,
-	"show_call_status_icon": false,
-	"cursor_blink": false,
-	"assistant": {
-		"default_model": {
-			"provider": "zed.dev",
-			"model": "claude-3-5-sonnet-20240620"
-		},
-		"version": "2",
-		"button": true
+	"git": {
+		"inline_blame": {
+			"show_commit_summary": true
+		}
+	},
+	"scrollbar": {
+		"show": "auto"
+	},
+	"tab_bar": {
+		"show": false,
+		"show_nav_history_buttons": false
+	},
+	"buffer_font_features": {
+		"liga": false
+	},
+	"toolbar": {
+		"quick_actions": false
 	},
 	"features": {
 		"copilot": false
 	},
 	"indent_guides": {
 		"enabled": false
-	},
-	"project_panel": {
-		"button": false,
-		"folder_icons": false,
-		"auto_fold_dirs": false,
-		"indent_guides": {
-			"show": "never"
-		}
 	},
 	"chat_panel": {
 		"button": false
@@ -78,14 +86,6 @@
 	},
 	"collaboration_panel": {
 		"button": false
-	},
-	"toolbar": {
-		"breadcrumbs": true,
-		"quick_actions": false
-	},
-	"tab_bar": {
-		"show": false,
-		"show_nav_history_buttons": false
 	},
 	"telemetry": {
 		"diagnostics": false,

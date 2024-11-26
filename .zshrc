@@ -9,8 +9,6 @@ export LC_ALL=en_US.UTF-8
 source <(fzf --zsh)
 source $ZSH/oh-my-zsh.sh
 
-PROMPT="$ "
-
 setopt INC_APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
@@ -24,6 +22,8 @@ alias c="clear"
 alias f="pwd"
 alias n="nvim"
 alias b="git rev-parse --abbrev-ref HEAD"
+
+PROMPT="$ "
 
 cover () {
   t=$(mktemp)
