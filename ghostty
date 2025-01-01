@@ -1,0 +1,30 @@
+background = 151515
+foreground = DADADA
+
+window-height = 47
+window-width = 85
+window-save-state = always
+
+font-family = "MonoLisa Regular"
+font-feature = -liga
+font-feature = -calt
+font-size = 14
+
+cursor-style = block
+cursor-style-blink = false
+cursor-color = FFFFFF
+
+shell-integration-features = no-cursor
+confirm-close-surface=false
+
+macos-titlebar-style = native
+macos-icon = custom-style
+macos-icon-screen-color = 151515
+macos-icon-ghost-color = DADADA
+
+keybind = cmd+shift+[=previous_tab
+keybind = cmd+shift+]=next_tab
+keybind = cmd+[=goto_split:left
+keybind = cmd+]=goto_split:right
+keybind = ctrl+tab=ignore
+keybind = ctrl+shift+tab=ignore

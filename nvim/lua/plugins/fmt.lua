@@ -1,6 +1,7 @@
 return {
 	"wellle/targets.vim",
 	"romainl/vim-cool",
+	'famiu/bufdelete.nvim',
 	"tpope/vim-surround",
 	"tpope/vim-commentary",
 	{

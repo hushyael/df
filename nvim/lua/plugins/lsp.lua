@@ -17,7 +17,11 @@ return {
 		lspc.gopls.setup({
 			capabilities = capabilities,
 			settings = {
-				gopls = { staticcheck = true, usePlaceholders = true }
+				gopls = {
+					staticcheck = true,
+					usePlaceholders = true,
+					buildFlags = {"-tags=acceptance,functional"}
+				}
 			}
 		})
 

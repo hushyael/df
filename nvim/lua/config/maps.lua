@@ -7,7 +7,7 @@ vim.keymap.set('n', '<leader>b', ':Neotree toggle<CR>', { silent = true })
 
 vim.keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
 vim.keymap.set('n', '<leader>s', ':w<CR>', { silent = true })
-vim.keymap.set('n', '<leader>w', ':bw<CR>', { silent = true })
+vim.keymap.set('n', '<leader>w', ':Bwipeout<CR>', { silent = true })
 
 vim.keymap.set('n', ',s', ':vsplit<CR>', { silent = true })
 vim.keymap.set('n', ',v', ':split<CR>', { silent = true })

@@ -3,8 +3,8 @@ return {
 	config = function()
 		local gs = require('gitsigns')
 
-		vim.keymap.set('n', '<Space>H', gs.preview_hunk_inline, {})
-		vim.keymap.set('n', '<Space>R', gs.reset_hunk, {})
+		vim.keymap.set('n', '<leader>H', gs.preview_hunk_inline, {})
+		vim.keymap.set('n', '<leader>R', gs.reset_hunk, {})
 
 		gs.setup({
 			signs = {
