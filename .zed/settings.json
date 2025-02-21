@@ -65,6 +65,9 @@
 	"indent_guides": {
 		"enabled": false
 	},
+	"features": {
+		"inline_completion_provider": "zed"
+	},
 	"telemetry": {
 		"diagnostics": false,
 		"metrics": false

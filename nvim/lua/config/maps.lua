@@ -12,6 +12,9 @@ vim.keymap.set('n', '<leader>w', ':Bwipeout<CR>', { silent = true })
 vim.keymap.set('n', ',s', ':vsplit<CR>', { silent = true })
 vim.keymap.set('n', ',v', ':split<CR>', { silent = true })
 
+vim.keymap.set('v', '>', '>gv', { silent = true })
+vim.keymap.set('v', '<', '<gv', { silent = true })
+
 vim.keymap.set('n', '<C-Tab>', ':bnext<CR>')
 vim.keymap.set('n', '<S-Tab>', ':bprev<CR>')
 vim.keymap.set('n', '<Space>', '<Nop>', { silent = true, remap = false })

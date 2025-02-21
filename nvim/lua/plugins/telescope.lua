@@ -15,12 +15,14 @@ return {
 		vim.keymap.set('n', 'fw', tsbuiltin.grep_string, {})
 		vim.keymap.set('n', 'fd', tsbuiltin.diagnostics, {})
 		vim.keymap.set('n', 'fb', tsbuiltin.buffers, {})
+		vim.keymap.set('n', 'c-d', tsbuiltin.buffers, {})
 
 		ts.setup({
 			defaults = {
 				mappings = {
 					i = { ["<c-t>"] = open_with_trouble },
 					n = { ["<c-t>"] = open_with_trouble },
+					n = { ['<c-d>'] = actions.delete_buffer },
 				},
 			}
 		})

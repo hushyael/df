@@ -52,18 +52,38 @@ local fileopts = {
 	}
 }
 
+local custom_icon = function(config, node, state)
+	if node.type == "directory" then
+		if node:is_expanded() then
+			return {
+				text = "⌄",
+				highlight = config.highlight,
+			}
+		end
+			return {
+				text = "›",
+				highlight = config.highlight,
+			}
+		end
+		return require("neo-tree.sources.common.components").icon(config,
+			node, state)
+	end
+
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons",
+		-- "nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
 	},
 
 	config = function()
 		require("neo-tree").setup({
 			filesystem = {
+				components = {
+					icon = custom_icon,
+				},
 				hijack_netrw_behavior = "open_default",
 				window = windowopts,
 				follow_current_file = {

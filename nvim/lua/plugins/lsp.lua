@@ -12,7 +12,21 @@ return {
 
 		lspc.zls.setup({})
 
-		lspc.rust_analyzer.setup({})
+		lspc.rust_analyzer.setup({
+				capabilities = capabilities,
+				settings = {
+					["rust-analyzer"] = {
+						checkOnSave = {
+							command = "clippy",
+						},
+						completion = {
+							autoimport = {
+								enable = true,
+							},
+						},
+					},
+				},
+		})
 
 		lspc.gopls.setup({
 			capabilities = capabilities,
@@ -20,7 +34,18 @@ return {
 				gopls = {
 					staticcheck = true,
 					usePlaceholders = true,
-					buildFlags = {"-tags=acceptance,functional"}
+					experimentalPostfixCompletions = true,
+					buildFlags = {"-tags=acceptance,functional"},
+					analyses = {unusedparams = true},
+					hints = {
+						parameterNames = true,
+						assignVariableTypes = true,
+						constantValues = true,
+						rangeVariableTypes = true,
+						compositeLiteralTypes = true,
+						compositeLiteralFields = true,
+						functionTypeParameters = true,
+					},
 				}
 			}
 		})

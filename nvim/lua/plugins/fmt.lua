@@ -1,5 +1,7 @@
 return {
 	"wellle/targets.vim",
+	"ellisonleao/gruvbox.nvim",
+	"rebelot/kanagawa.nvim",
 	"romainl/vim-cool",
 	'famiu/bufdelete.nvim',
 	"tpope/vim-surround",
